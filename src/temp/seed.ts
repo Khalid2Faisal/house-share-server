@@ -2,8 +2,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import { ObjectID } from "mongodb";
-import { Listing } from "../src/lib/types";
-import { connectDatabase } from "../src/database";
+import { Listing } from "../lib/types";
+import { connectDatabase } from "../database";
 
 const seed = async () => {
   try {
