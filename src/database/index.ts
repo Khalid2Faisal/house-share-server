@@ -8,7 +8,7 @@ export const connectDatabase = async (): Promise<Database> => {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
-  const db = client.db("book-it-DB");
+  const db = client.db("house-share-db");
   console.log("Connected successfully to database");
 
   return {
