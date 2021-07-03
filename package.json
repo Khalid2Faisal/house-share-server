@@ -1,5 +1,5 @@
 {
-  "name": "house-share",
+  "name": "house-share-server",
   "version": "1.0.0",
   "description": "website to book rooms, tickets, and anything.",
   "main": "index.js",
@@ -29,6 +29,7 @@
   "scripts": {
     "start": "nodemon src/index.ts",
     "build": "tsc -p ./",
-    "seed": "ts-node src/temp/seed.ts"
+    "seed": "ts-node src/temp/seed.ts",
+    "clear": "ts-node src/temp/clear.ts"
   }
 }

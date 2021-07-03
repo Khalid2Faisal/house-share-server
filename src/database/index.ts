@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-import { Database } from "../lib/types";
+import { Database, Booking, Listing, User } from "../lib/types";
 
 const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER_PASSWORD}@${process.env.DB_CLUSTER}.nl2hz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
@@ -12,6 +12,8 @@ export const connectDatabase = async (): Promise<Database> => {
   console.log("Connected successfully to database");
 
   return {
-    listings: db.collection("listings"),
+    bookings: db.collection<Booking>("bookings"),
+    listings: db.collection<Listing>("listings"),
+    users: db.collection<User>("users"),
   };
 };
