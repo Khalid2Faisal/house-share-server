@@ -10,6 +10,7 @@ import { connectDatabase } from "./database";
 const mount = async (app: Application) => {
   const db = await connectDatabase();
 
+  app.use(express.json({ limit: "2mb" }));
   app.use(cookieParser(process.env.COOKIE_SECRET));
 
   const server = new ApolloServer({
